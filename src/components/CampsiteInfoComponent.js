@@ -30,8 +30,10 @@ export default class CampsiteInfo extends Component {
                     <h4>Comments</h4>
                     {comments.map(comment => 
                     <div>
-                        <p>{comment.text}</p>
-                        <p>-- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p> 
+                        <p>
+                        {comment.text} <br />
+                        -- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
+                        </p>
                     </div>
                     )}
                 </div>
@@ -44,15 +46,15 @@ export default class CampsiteInfo extends Component {
 
     render() {
         return (
-            <div>
-            {
-            this.props.campsite 
-            ? <div className="row">
-                {this.renderCampsite(this.props.campsite)}
-                {this.renderComments(this.props.campsite.comments)}
-              </div> 
-            : <div></div>
-            }
+            <div className="container">
+                {
+                this.props.campsite 
+                ? <div className="row">
+                    {this.renderCampsite(this.props.campsite)}
+                    {this.renderComments(this.props.campsite.comments)}
+                </div> 
+                : <div></div>
+                }
             </div>
         );
     }
