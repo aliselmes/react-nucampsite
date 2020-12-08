@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem, Button, 
-    Modal, ModalHeader, ModalBody, Label, Col, Row} from 'reactstrap';
+    Modal, ModalHeader, ModalBody, Label } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 
@@ -18,12 +18,6 @@ class CommentForm extends Component {
 
         this.state = {
             isModalOpen: false,
-            rating: '1',
-            author: '',
-            text: '',
-            touched: {
-                author: false
-            }
         };
     }
 
