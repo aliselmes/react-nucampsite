@@ -42,7 +42,7 @@ function Directory(props) {
             return (
                 <div className="container">
                     <div className="row">
-                        <div classNa="col">
+                        <div className="col">
                             <h4>{props.campsites.errMess}</h4>
                         </div>
                     </div>
